@@ -1,15 +1,15 @@
 import Buyable from "../buyable";
 import Cart from "../class/cart";
 
-test('test create cart', (): void => {
-    const result: Cart = new Cart();
+test('test create cart', () => {
+    const result = new Cart();
 
     expect(result).toBeInstanceOf(Cart);
     expect(result).toEqual({_items:[]});
 });
 
 test('get cart', () => {
-    const cart: Cart = new Cart();
+    const cart = new Cart();
     cart.add({
         id: 1, 
         name: 'Food', 
@@ -22,8 +22,8 @@ test('get cart', () => {
     ]);
 });
 
-test('calculate without discount', (): void => {
-    const cart: Cart = new Cart();
+test('calculate without discount', () => {
+    const cart = new Cart();
     cart.add({
         id: 1, 
         name: 'Food', 
@@ -34,12 +34,12 @@ test('calculate without discount', (): void => {
         name: 'drink', 
         price: 100
     });
-    const result: number = cart.calculateWithoutDiscount();
+    const result = cart.calculateWithoutDiscount();
     expect(result).toBe(300);
 });
 
-test('calculate with discount', (): void => {
-    const cart: Cart = new Cart();
+test('calculate with discount', () => {
+    const cart = new Cart();
     cart.add({
         id: 1, 
         name: 'Food', 
@@ -50,12 +50,12 @@ test('calculate with discount', (): void => {
         name: 'drink', 
         price: 100
     });
-    const result: number = cart.calculateWithDiscount(50);
+    const result = cart.calculateWithDiscount(50);
     expect(result).toBe(150);
 });
 
-test('delete cart', (): void => {
-    const cart: Cart = new Cart();
+test('delete cart', () => {
+    const cart = new Cart();
     cart.add({
         id: 1, 
         name: 'Food', 

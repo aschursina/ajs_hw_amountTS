@@ -4,6 +4,7 @@ Thumbs.db*
 HELP.md
 dist
 doc
+src/tests/test.js
 
 # Logs
 logs
